@@ -60,7 +60,13 @@ def find_process(*pattern)
     return mongrels
 end
 
-
+# get memory usage of current process
+def current_proc_used_mem
+    #pid, size = `ps ax -o pid,rss | grep -E "^[[:space:]]*#{$$}"`.strip.split.map(&:to_i)
+    #`ps -o rss -p #{$$}`.chomp.split("\n").last.to_i
+    #`ps -o rss -p #{$$}`.strip.split.last.to_i * 1024
+    `ps -o rss= -p #{Process.pid}`.to_i 
+end
 # test
 =begin
 ret =  find_process("ruby", "")

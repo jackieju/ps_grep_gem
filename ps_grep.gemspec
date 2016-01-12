@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'ps_grep'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2016-01-05'
   s.summary     = "Find a process info by pattern!"
   s.description = "Find a process info by pattern!"
@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
   # add executables
   s.executables << 'ps_grep'
+
 end
